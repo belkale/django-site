@@ -1,3 +1,8 @@
+{% extends "base.html" %}
+{% block title %} {{ poll.question }} {% endblock %}
+
+{% block content %}
+
 <h1>{{ poll.question }}</h1>
 
 <ul>
@@ -7,3 +12,4 @@
 </ul>
 
 <a href="{% url 'polls:detail' poll.id %}">Vote again?</a>
+{% endblock %}
